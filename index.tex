@@ -4,6 +4,7 @@
 \usepackage[spanish]{babel}
 \usepackage{amssymb}
 \usepackage{graphicx}
+\usepackage{float}
 \usepackage{lineno}
 \usepackage[utf8]{inputenc}
 \usepackage{url}
@@ -18,7 +19,7 @@
 		\title{\huge Gestores de BD NoSQL}
 		
 		\author{ROBLES FLORES, Anthony Richard     (2016056192))}
-		\author{HUICHI CONTRERAS, Franklin Carlos          	(2016054945))}
+		\author{HUICHI CONTRERAS, Franklin Carlos          	(2016054948))}
 		\author{PANTY SIHUAYRO, Juan Carlos         	(2015050948))}  
 		\author{ATAHUACHI RIVERA, Gabriela Rocío                (2016055341))} 
 		\address{Escuela Profesional de Ingeniería de Sistemas}
@@ -111,25 +112,31 @@ Un gran proyecto ejemplo de este tipo de bases de datos es Facebook, una web que
 
 \subsection{\textbf{Grandes compañías que utilizan este tipo de bases de datos}}
 Son muchas las grandes empresas que hacen uso de este tipo de bases de datos no relacionales, como:
+\begin{itemize}
 \item Cassandra: Facebook, Twitter…
 \item HBase: Yahoo, Adobe…
 \item Redis: Flickr, Instagram, Github…
 \item Neo4j: Infojobs…
 \item MongoDB: FourSquare, SourceForge, CERN… 
+\end{itemize}
 
 \subsubsection{\textbf{Su uso es adecuado para aquellas que:}}
+\begin{itemize}
 \item Manejan volúmenes ingentes de datos
 \item Tienen una frecuencia alta de accesos de lectura y escritura
 \item Con cambios frecuentes en los esquemas de datos
 \item Y que no requieren consistencia ACID
+\end{itemize}
 
 \subsubsection{\textbf{Casos de aplicación:}}
+\begin{itemize}
 \item Servicios Web2.0 (redes sociales, blogs, etc.)
 \item Aplicaciones IoT
 \item Almacenamiento de perfiles sociales
 \item Juegos sociales
 \item Gestión de contenidos
-EDITAR\\
+\end{itemize}
+
 \subsubsection{\textbf{No adecuados}}
 NoSQL no es adecuado para aplicaciones que generen informes
 con consultas complejas (necesidad de JOINs), aunque tienen
@@ -137,35 +144,42 @@ buena conexión con entornos como MapReduce que permite
 paralelizar operaciones complejas como agregaciones, filtros,
 etc..
 
+\subsection {\textbf{Bases de datos documentales}}
+Una base de datos orientada a documentos está diseñada para gestionar información orientada a
+documentos o datos semi-estructurados. Este tipo de bases de datos constituye una de las principales
+categorías de las llamadas bases de datos NoSQL.\\
+La popularidad del término "base de datos orientada a
+documentos"" o "almacén de documentos" ha crecido a la par con el uso del término NoSQL en sí. A diferencia de las conocidas bases de datos relacionales con su definición de “tabla”, los sistemas documentales están diseñados entorno a la definición abstracta de un "documento".\\
+Las bases de datos de documentales son consideradas por muchos como un escalón superior ante los
+simples gestores de llave-valor, puesto que permiten encapsular pares de llave-valor en estructuras más
+complejas denominadas documentos. Por otra parte no existe un esquema estricto a seguir para definir
+estos documentos, lo cual simplifica sustancialmente su uso.\\
+Almacenar y recuperar todos los datos relacionados como una sola unidad puede entregar ventajas
+enormes en el rendimiento y la escalabilidad. De este modo, los gestores de datos no tienen que hacer
+operaciones complejas como las uniones para encontrar los datos que normalmente están relacionados,
+ya que todo se encuentra en un mismo lugar.
 %% Ejemplo de inclusión de imagen
-\begin{figure}[htb]
+\begin{figure}[H]
 	\begin{center}
-		\includegraphics[width=14cm]{./IMAGENES/basededatos_1} 
-		\caption{Incluyendo la base de datos en DevOps}
+		\includegraphics[width=10cm]{./IMAGENES/basededatos_1} 
+		\caption{Base de datos documentales}
 	\end{center}
 \end{figure}
-
-\subsubsection{\textbf{B2}}
-
-EDITAR\\
-
-%% TERCERA SUBSECCION
-\subsection{\textbf{C}}
-
-\subsubsection{\textbf{C1}}
-
-EDITAR\\
-
+A excepción de algunas, estas bases de datos generalmente proporcionan sus datos a través de HTTP,
+almacenan los datos como documentos con la notación de objetos de JavaScript (JSON) y ofrecen
+diferentes API para varios lenguajes. Los intereses generales son la sencillez, velocidad y escalabilidad.
+Entre las más utilizadas se encuentran: 
 \begin{itemize}
-
-\item x
-\item y
-\item z
-
+\item MongoDB (mongodb.org)
+\item CouchDB (couchdb.apache.org)
+\item RavenDB (ravendb.net)
 \end{itemize}
-\subsubsection{\textbf{C2}}
-
-EDITAR\\
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=15cm]{./IMAGENES/basededatos_2} 
+		\caption{Base de datos documentales}
+	\end{center}
+\end{figure}
 
 
 %% ----------------------------------------------------------------------------------------------------------------------------------
@@ -198,12 +212,40 @@ EDITAR\\
 \begin{itemize}
 
 \item Conclusion 1 : \\
+Las bases de datos NoSQL son una tecnología muy potente y variada que, si se sabe
+emplear de forma correcta, resulta ser una herramienta valiosísima que permitirá
+almacenar grandes cantidades de datos y extraer conocimiento de ellos de forma
+eficiente, tan necesario hoy en día debido al fenómeno BigData. No en vano, los puestos
+profesionales de informáticos que poseen conocimientos sobre alguna de estas
+tecnologías se están comenzando a demandar ampliamente.\\
 
 \item Conclusion 2 : \\ 
+Estas tecnologías son muy flexibles y versátiles, proponiendo soluciones a problemas
+que de otra manera han resultado ser difíciles de abordar. Pero esta tecnología no ha
+llegado para reemplazar a las bases de datos relacionales. Los sistemas relacionales
+poseen una serie de características y cumplen una serie de requisitos indispensables para
+muchos sectores de la informática, como la banca o el comercio electrónico. \\
 
 \item Conclusion 3 : \\ 
+Aún quedan muchos aspectos por explorar en esta tecnología, ya que aún no está
+madura (es relativamente joven, ya que se comenzó a hablar de ella con fines
+comerciales hace poco más de 5 años), faltando todavía experiencia en sistemas en
+producción de cara al público. Si se compara con los sistemas relacionales, éstos llevan
+solucionando problemas de almacenamiento y securización de datos desde hace más de
+50 años.\\
 
 \item Conclusion 4 : \\ 
+Las bases de datos NoSQL han llegado para complementar la oferta de bases de datos
+de la que se dispone a la hora de abordar los problemas, y en ningún caso es
+recomendable alcanzar una posición extrema con respecto a las decisiones que se toman
+en este ámbito. Cada problema debe ser analizado en su conjunto, con sus necesidades
+particulares para cada caso, y una vez se tiene un esquema claro de esto, se debe buscar
+la solución de almacenamiento de entre todas las disponibles que mejor cubra las
+necesidades del problema.
+
+
+
+
 \end{itemize}
 
 %% ----------------------------------------------------------------------------------------------------------------------------------
