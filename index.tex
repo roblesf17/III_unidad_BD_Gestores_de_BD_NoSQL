@@ -117,9 +117,25 @@ Son muchas las grandes empresas que hacen uso de este tipo de bases de datos no 
 \item Neo4j: Infojobs…
 \item MongoDB: FourSquare, SourceForge, CERN… 
 
-\subsubsection{\textbf{B1}}
+\subsubsection{\textbf{Su uso es adecuado para aquellas que:}}
+\item Manejan volúmenes ingentes de datos
+\item Tienen una frecuencia alta de accesos de lectura y escritura
+\item Con cambios frecuentes en los esquemas de datos
+\item Y que no requieren consistencia ACID
 
+\subsubsection{\textbf{Casos de aplicación:}}
+\item Servicios Web2.0 (redes sociales, blogs, etc.)
+\item Aplicaciones IoT
+\item Almacenamiento de perfiles sociales
+\item Juegos sociales
+\item Gestión de contenidos
 EDITAR\\
+\subsubsection{\textbf{No adecuados}}
+NoSQL no es adecuado para aplicaciones que generen informes
+con consultas complejas (necesidad de JOINs), aunque tienen
+buena conexión con entornos como MapReduce que permite
+paralelizar operaciones complejas como agregaciones, filtros,
+etc..
 
 %% Ejemplo de inclusión de imagen
 \begin{figure}[htb]
